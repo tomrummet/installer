@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Setting env to skip redundant commands
-export RUNNING_DOTFILES=1
+export RUNNING_INSTALLER=1
 
 # Install dependencies
 yay --noconfirm
@@ -19,9 +19,10 @@ yay -S --needed --noconfirm \
     zsh \
     gettext \
     gum \
-    ghostty
+    ghostty \
+    fastfetch
 
-INSTALLABLE=$(gum choose --no-limit --header "What do you wish to install?" "PHP" "Docker" "Composer" "Symfony")
+INSTALLABLE=$(gum choose --no-limit --header "What do you wish to install?" "Hyprland" "PHP" "Docker" "Composer" "Symfony")
 
 INSTALL=($(echo "$INSTALLABLE" | tr ',' '\n'))
 
@@ -87,4 +88,4 @@ if [ -d "$HOME/code/setup-tmp" ]; then
     sudo rm -rf "$HOME/code/setup-tmp"
 fi
 
-unset RUNNING_DOTFILES
+unset RUNNING_INSTALLER
