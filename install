@@ -81,7 +81,7 @@ if [ ! -f "$HOME/.fonts/JetBrainsMonoNLNerdFont-Thin.ttf" ]; then
 fi
 
 # Node Version Manager
-yay -S nvm --noconfirm
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.2/install.sh | bash
 
 if [ -d "$HOME/code/setup-tmp" ]; then
     echo ">> Removing setup-tmp folder..."
