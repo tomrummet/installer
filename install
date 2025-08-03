@@ -16,6 +16,7 @@ yay -S --needed --noconfirm \
     wget \
     unzip \
     xclip \
+    cronie \
     zsh \
     gettext \
     gum \
@@ -47,10 +48,10 @@ if [ ! -f "$HOME/.config/starship.toml" ]; then
     git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
     # Install Starship
-        gum log --structured --time="DateTime" --level info "Installing Starship"
+    gum log --structured --time="DateTime" --level info "Installing Starship"
 
-        cd $HOME/code/setup-tmp/
-	curl -sS https://starship.rs/install.sh | sh
+    cd $HOME/code/setup-tmp/
+    curl -sS https://starship.rs/install.sh | sh
 fi
 
 # Install PHPActor (used in Neovim)
